@@ -29,6 +29,7 @@ Route::get('/usuarios', function () {
     find(x) -- Pelo ID;
     where(''condição, 'valor')->get();
     paginate(x) -- Pelo ID;
+    =  date('d/m/Y', strtotime($user->created_at));
 
     */
     return  App\Models\Usuario::paginate(10);
